@@ -22,8 +22,6 @@ df_business_maker.ipynb - Cria uma base de dados juntando as informações já e
 
 api.py - Scrip usado para acessar a base de dados SQL
 
-Jupyter Notebooks used to demonstrate how Apache Spark can be used to manipulate data, with an end goal of generating a heatmap based on the reviews of users.
-
 ## Entrega B e A
 EntregaBeA.ipynb
 - df_business_maker é o script em que foi feito requests e montado a tabela de business do banco de dados relacional.
