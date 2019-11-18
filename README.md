@@ -18,13 +18,13 @@ EntregaC.ipynb - Explicações sobre o Spark e o dataset, além de algumas demon
 
   ![alt text](https://github.com/guipleite/Yelp-heatmap/blob/master/imagens/normie_graph.png?raw=true)
 
-df_business_maker.ipynb - Cria uma base de dados juntando as informações já existentes com as coletadas a partir da API do Yelp.
 
-api.py - Scrip usado para acessar a base de dados SQL
 
 ## Entrega B e A
 EntregaBeA.ipynb
-- df_business_maker é o script em que foi feito requests e montado a tabela de business do banco de dados relacional.
+- df_business_maker.ipynb é o script em que foi feito requests e montado a tabela de business do banco de dados relacional.
+
+- api.py - Scrip usado para acessar a base de dados SQL
 
 - EntregaBeA é o script que cria as outras tabelas do campo e termina o banco de dados, além de implementar a api.py e possuir uma célula interativa que ao colocar o id do usuário, retorna o mapa de calor dos lugares frequentados por ele.
 
