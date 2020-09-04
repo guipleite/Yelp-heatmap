@@ -1,53 +1,26 @@
 # Yelp Heatmap
 
-- Gabriel Monteiro
+This project consisted in using the Apache Spark library to demonstrate how it can handle the manipulation of high amounts of data. The dataset used was: https://www.kaggle.com/yelp-dataset/yelp-dataset . It is a subset of Yelp's businesses, reviews, and user data realating to businesses located across 11 metropolitan areas in four countries.
 
-- Guilherme Leite
+The [EntregaC.ipynb](./EntregaC.ipynb)  file contains the steps used to generate the following graphs with the Spark framework. The first image is the percentage of review scores of specific buisness over time, the second graph depicts the same data however normalized over the total reviews for that specific year, which gives us a more accurate accurate understanding of the rating's progression.
 
-- Hugo Carl
+  - Reviews over time
 
-## Entrega C
+  ![alt text](./imagens/graph.png)
+  
 
-EntregaC.ipynb - Explicações sobre o Spark e o dataset, além de algumas demonstrações do framework
+  - Reviews over time normalized
 
-  - Gráfico de reviews
+  ![alt text](./imagens/normie_graph.png)
 
-  ![alt text](https://github.com/guipleite/Yelp-heatmap/blob/master/imagens/graph.png?raw=true)
+The second part of the project was creating a heatmap with the user's reviews. To do that we first used Spark to get the average stars and std dev of each buisness in the database, then used the Yelp API to get the latitude and longitude of the buisnesss ([df_business_maker.ipynb](./df_business_maker.ipynb)), finally we saved that information on a SQL databse with the diagram bellow.
+To create the heatmap itself we used the Google gmaps library for Python in the [EntregaBeA.ipynb](EntregaBeA.ipynb) there is an interactive cell that can generate the map based on an user's id showing they're reviews
 
-  - Gráfico de reviews normalizado
+![alt text](./imagens/interativa.png)
 
-  ![alt text](https://github.com/guipleite/Yelp-heatmap/blob/master/imagens/normie_graph.png?raw=true)
-
-
-
-## Entrega B e A
-EntregaBeA.ipynb
-- df_business_maker.ipynb é o script em que foi feito requests e montado a tabela de business do banco de dados relacional.
-
-- api.py - Scrip usado para acessar a base de dados SQL
-
-- EntregaBeA é o script que cria as outras tabelas do campo e termina o banco de dados, além de implementar a api.py e possuir uma célula interativa que ao colocar o id do usuário, retorna o mapa de calor dos lugares frequentados por ele.
+![alt text](./imagens/media.png)
 
 
-### Imagens dos mapas de calor(o notebook no git não mostra elas no final)
 
-- Célula interativa do script
-
-![alt text](https://github.com/guipleite/Yelp-heatmap/blob/master/imagens/interativa.png?raw=true)
-
-
-- Média do lugares
-
-![alt text](https://github.com/guipleite/Yelp-heatmap/blob/master/imagens/media.png?raw=true)
-
-- Desvio Padrão dos lugares
-
-![alt text](https://github.com/guipleite/Yelp-heatmap/blob/master/imagens/dp.png?raw=true)
-
-- Banco de Dados Relacional
-
+- Database diagram
 ![alt text](https://github.com/guipleite/Yelp-heatmap/blob/master/imagens/banco.png?raw=true)
-
-Jupyter Notebooks used to demonstrate how Apache Spark can be used to manipulate data, with an end goal of generating a heatmap based on the reviews of users.
-
-Dataset used: https://www.kaggle.com/yelp-dataset/yelp-dataset/download
